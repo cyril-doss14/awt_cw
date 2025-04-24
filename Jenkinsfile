@@ -4,7 +4,6 @@ pipeline {
   environment {
     DOCKER_IMAGE = 'cyrildoss14/startupapp-1'
     DOCKER_TAG = 'latest'
-    DOCKER_REGISTRY_CREDS = 'dockerhub-credentials-id' // Update with your actual Jenkins credentials ID
   }
 
   stages {
