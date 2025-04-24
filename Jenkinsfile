@@ -2,10 +2,13 @@ pipeline {
   agent any
 
   environment {
+    DOCKER_IMAGE = 'cyrildoss14/startupapp-1'
     DOCKER_TAG = 'latest'
+    DOCKER_REGISTRY_CREDS = 'dockerhub-credentials-id' // Update with your actual Jenkins credentials ID
   }
 
   stages {
+
     stage('Build Docker Image') {
       steps {
         dir('Startup-app') {
@@ -19,7 +22,6 @@ pipeline {
         withCredentials([usernamePassword(credentialsId: "${DOCKER_REGISTRY_CREDS}", usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
           sh '''
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-            docker tag startup-app_app:latest $DOCKER_IMAGE:$DOCKER_TAG
             docker push $DOCKER_IMAGE:$DOCKER_TAG
           '''
         }
