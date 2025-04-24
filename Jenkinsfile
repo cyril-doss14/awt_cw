@@ -6,12 +6,7 @@ pipeline {
     DOCKER_TAG = 'latest'
   }
 
-  stages {
-    stage('Clone Repository') {
-      steps {
-        git branch: 'main' url: 'https://github.com/cyril-doss14/awt_cw.git'
-      }
-    }
+  
 
     stage('Build Docker Image') {
       steps {
