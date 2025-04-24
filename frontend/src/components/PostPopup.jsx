@@ -27,7 +27,7 @@ const PostPopup = ({ post, onClose, onAuthorClick }) => {
         <p><strong>Description:</strong> {post.description}</p>
         <p><strong>Domain:</strong> {post.domain}</p>
         <p><strong>Stage:</strong> {post.projectStage}</p>
-        <p><strong>Budget:</strong> ₹{post.budget}</p>
+        <p><strong>Budget:</strong> £{post.budget}</p>
         <p><strong>Location:</strong> {post.location}</p>
         {post.file && (
           <img
