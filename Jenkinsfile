@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Clone Repository') {
       steps {
-        git 'https://github.com/cyril-doss14/awt_cw.git'
+        git branch: 'main' url: 'https://github.com/cyril-doss14/awt_cw.git'
       }
     }
 
