@@ -2,12 +2,10 @@ pipeline {
   agent any
 
   environment {
-       // example: cyrildoss14/startup-app
     DOCKER_TAG = 'latest'
   }
 
-  
-
+  stages {
     stage('Build Docker Image') {
       steps {
         dir('Startup-app') {
