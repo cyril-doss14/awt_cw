@@ -45,7 +45,7 @@ pipeline {
       echo '✔️ Pipeline completed.'
     }
     failure {
-      mail to: 'cyrilrodriguez007@gmail.com',
+      mail to: 'cyrildoss007@gmail.com',
            subject: '❌ Jenkins Build Failed',
            body: 'Check your Jenkins console output for failure details.'
     }
