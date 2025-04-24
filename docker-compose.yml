@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   app:
+    image: cyrildoss14/startupapp-1:latest
     build: .
     ports:
       - "5001:5001"
