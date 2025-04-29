@@ -5,13 +5,13 @@ services:
     image: cyrildoss14/startupapp-1:latest
     build: .
     ports:
-      - "5001:5001"
+      - "80:5001"
     volumes:
       - ./backend/uploads:/app/backend/uploads
     environment:
       - PORT=5001
       - MONGO_URI=mongodb://mongo:27017/startup-app-1
-      - FRONTEND_URL=http://localhost:5001
+      - FRONTEND_URL=http://localhost
     depends_on:
       - mongo
 
